@@ -1,0 +1,163 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#index-two{
+	height: 100vh;
+	width: 100vw;
+	background:url(4.jpg) no-repeat 0px 0px;
+  background-size:100% 100%;
+  background-repead:no-repead;
+  position: relative;
+}
+.animate {
+  font-size: 3em;
+  width: 100vw;
+  text-align:center;
+  position: relative;
+  top: 40px;
+  margin-bottom: 20%;
+  
+}
+.animate p {
+  display: inline-block;
+}
+.change p {
+    color: #ffffff;
+    font-family: raleway;
+	font-size: 0.9em;
+	text-align:center;
+    /*opacity: 0;
+    transform: translate(-150px, 0) scale(.5);
+    animation: leftRight 6s forwards;*/
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-name: active;
+}
+@keyframes active {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}  
+@keyframes leftRight {
+  40% {
+    transform: translate(30px, 0) scale(.7);
+    opacity: 1;
+    color: #000;
+  }
+  60% {
+    color: #fff;
+  }
+  80% {
+    transform: translate(0) scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0) scale(1);
+    opacity: 1;
+  }
+}
+@font-face {
+      font-family: 'raleway';
+      src: url("../默陌山魂手迹.ttf");
+   }
+.box{
+	width:75%;
+  font-size: 1.08em;	/*height: 7em;*/	
+  border:2px dashed #A9F5F2;
+	margin:0 auto;
+	margin-bottom: 7%;
+  background-image: linear-gradient(-90deg,#CEECF5 0%,#A9E2F3 100%);
+  box-shadow: 5px 5px 5px #888888;
+  border-radius:25px;
+  animation: fade-in;  
+  animation-duration: 10s;  
+  -webkit-animation:fade-in 1.5s;
+  opacity: 0.8;
+}
+
+@keyframes fade-in {  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+    40% {opacity: 0.3;}
+    80% {opacity: 0.6;}/*过渡状态 透明度为0*/  
+    100% {opacity: 1;}/*结束状态 透明度为1*/  
+}  
+@-webkit-keyframes fade-in {/*针对webkit内核*/  
+    0% {opacity: 0;}  
+    40% {opacity: 0.3;}
+    80%{opacity: 0.6;}  
+    100% {opacity: 1;}  
+}  
+.foot{
+	height: 10%;
+	width: 100%;
+  text-align:center;
+  position: relative;
+  top:0%;
+  animation: name 0.5s ease-in-out 2.7s infinite alternate;
+}
+@keyframes name{
+from{margin-top:0px;}
+to{margin-top:-10px;}
+}
+@keyframes name{
+from{transform:translate(0,0)}
+to{transform:translate(0,10px)}
+}   
+.foot-font{
+	width: 40%;
+	margin:0 auto;
+	font-size: 1.2em;
+  font-family: raleway;
+  font-weight: bold;
+  color: #ffffff;
+}
+.bottom1{
+  position: relative;
+  top:-15%;
+  left: -20%;
+}
+.bottom2{
+   position: relative;
+   top:-15%;
+   left: 10%;
+}
+@media(min-width: 400px) and (max-width: 430px){
+  .box{
+    font-size: 0.7em;
+  }
+}
+@media(min-width: 750px) and (max-width: 800px){
+  .box{
+    font-size: 1.3em;
+  }
+}
+@media(min-width: 1000px){
+  .foot-font{
+    font-size: 1.8em;
+  }
+}
+@media(min-width: 1000px){
+  .change p {
+    font-size: 2em;
+  }
+}
+@media(min-width: 1000px){
+  .box {
+    font-size: 1.5em;
+  }
+}
